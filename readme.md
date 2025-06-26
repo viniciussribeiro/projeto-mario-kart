@@ -101,3 +101,34 @@
 
 <input type="checkbox" id="vitoria-item" />
 <label for="vitoria-item">Ao final, vence quem acumulou mais pontos</label>
+# 📝 Relatório de Alteração de Código – projeto-mario-kart do Felipão DIO
+
+## Objetivo da Alteração
+Corrigir o comportamento incorreto onde ambos os jogadores caíam juntos na armadilha e garantir que armadilhas sejam aplicadas de forma **aleatória e individual** por jogador, independentemente do tipo de bloco sorteado.
+
+---
+
+## 🔧 Alterações Realizadas
+
+1. **Remoção do bloco `"ARMADILHA"`** da função `getRandomBlock()`  
+   - O bloco ARMADILHA foi eliminado como tipo principal da rodada.
+
+2. **Inserção de armadilhas aleatórias por jogador**  
+   - A cada rodada, os dois jogadores têm **25% de chance** (`Math.random() < 0.25`) de cair em uma armadilha.
+   - A verificação ocorre independentemente do tipo de bloco (RETA, CURVA, CONFRONTO).
+   - Caso o jogador tenha pontos, perde 1 ponto.
+   - Se não tiver pontos, é atingido, mas sem penalidade.
+
+3. **Pontuação normal mantida apenas nos blocos RETA e CURVA**  
+   - As armadilhas não afetam diretamente o sistema de pontuação da rodada.
+
+---
+
+## ✅ Resultado da Alteração
+
+- A armadilha agora é um **evento paralelo** à rodada, com chance separada para cada jogador.
+- O jogo se torna mais dinâmico e imprevisível.
+- Redução de empates injustos e aumento do impacto estratégico da sorte.
+
+---
+
