@@ -103,7 +103,6 @@
 <label for="vitoria-item">Ao final, vence quem acumulou mais pontos</label>
 # 📝 Relatório de Alteração de Código – projeto-mario-kart do Felipão DIO
 
-## Objetivo da Alteração
 Corrigir o comportamento incorreto onde ambos os jogadores caíam juntos na armadilha e garantir que armadilhas sejam aplicadas de forma **aleatória e individual** por jogador, independentemente do tipo de bloco sorteado.
 
 ---
